@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SULEXY FASHION EMPIRE — High dress making</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+--cream:#f5f0e8;
+--ink:#0d0c0a;
+--gold:#b8975a;
+--gold-light:#d4b483;
+--warm:#8a8278;
+--mid:#2a2520;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+background:var(--cream);
+color:var(--ink);
+font-family:'Montserrat',sans-serif;
+overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;left:0;right:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 50px;
+z-index:100;
+}
+
+.nav-logo{
+font-family:'Cormorant Garamond',serif;
+letter-spacing:0.3em;
+font-size:14px;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+font-size:11px;
+letter-spacing:0.2em;
+text-decoration:none;
+color:var(--ink);
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+}
+
+.hero-left{
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:0 0 80px 60px;
+}
+
+.hero-eyebrow{
+font-size:10px;
+letter-spacing:0.4em;
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.hero-title{
+font-family:'Cormorant Garamond',serif;
+font-size:6vw;
+line-height:1;
+}
+
+.hero-title em{
+color:var(--gold);
+font-style:italic;
+}
+
+.hero-sub{
+margin-top:20px;
+color:var(--warm);
+max-width:300px;
+font-size:13px;
+line-height:1.8;
+}
+
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:12px 30px;
+background:var(--ink);
+color:#fff;
+font-size:11px;
+letter-spacing:0.2em;
+text-decoration:none;
+}
+
+.hero-right{
+background:linear-gradient(160deg,#c8b99a,#3a3028);
+}
+
+/* COLLECTIONS */
+.collections{
+padding:120px 60px;
+background:var(--ink);
+color:#fff;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:50px;
+margin-bottom:60px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1.6fr 1fr 1fr;
+grid-template-rows:400px 300px;
+gap:15px;
+}
+
+.card{
+position:relative;
+background:linear-gradient(135deg,#4a3f35,#1a1510);
+display:flex;
+align-items:flex-end;
+padding:20px;
+}
+
+.card:nth-child(1){grid-row:1/3}
+.card:nth-child(2){background:linear-gradient(135deg,#6b5e4e,#2d2520)}
+.card:nth-child(3){background:linear-gradient(135deg,#3d3530,#1e1a16)}
+.card:nth-child(4){background:linear-gradient(135deg,#5a4f42,#28221d)}
+.card:nth-child(5){background:linear-gradient(135deg,#4f4540,#221e1a)}
+
+.card span{
+font-size:10px;
+letter-spacing:0.3em;
+color:var(--gold-light);
+}
+
+.card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:20px;
+}
+
+/* PHILOSOPHY */
+.philosophy{
+padding:120px 60px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+}
+
+.phil-box{
+height:400px;
+background:var(--mid);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-style:italic;
+font-family:'Cormorant Garamond',serif;
+font-size:24px;
+}
+
+.phil-text h2{
+font-family:'Cormorant Garamond',serif;
+font-size:45px;
+margin-bottom:20px;
+}
+
+.phil-text p{
+color:var(--warm);
+line-height:2;
+font-size:14px;
+}
+
+/* ATELIER */
+.atelier{
+background:var(--mid);
+color:#fff;
+padding:120px 60px;
+text-align:center;
+}
+
+.atelier h2{
+font-family:'Cormorant Garamond',serif;
+font-size:45px;
+margin-bottom:60px;
+}
+
+.atelier-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.atelier-item{
+border:1px solid rgba(255,255,255,0.1);
+padding:30px;
+}
+
+.atelier-item h3{
+font-family:'Cormorant Garamond',serif;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact{
+background:#000;
+color:#fff;
+padding:120px 60px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.contact h2{
+font-family:'Cormorant Garamond',serif;
+font-size:45px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+background:transparent;
+border:none;
+border-bottom:1px solid #555;
+padding:10px;
+color:#fff;
+}
+
+button{
+padding:12px;
+background:var(--gold);
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+background:#080706;
+color:#aaa;
+padding:30px 60px;
+display:flex;
+justify-content:space-between;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<div class="nav-logo">Sulexy Fashion Empire</div>
+<ul class="nav-links">
+<li><a href="#collections">Collections</a></li>
+<li><a href="#philosophy">Philosophy</a></li>
+<li><a href="#atelier">Atelier</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-left">
+<div class="hero-eyebrow">Haute Couture</div>
+<h1 class="hero-title">
+Wear what you <em>dare</em>
+</h1>
+<p class="hero-sub">
+Each garment is a dialogue between identity and elegance.
+</p>
+<a href="#collections" class="btn">Explore Collection</a>
+</div>
+<div class="hero-right"></div>
+</section>
+
+<section class="collections" id="collections">
+<h2 class="section-title">Seasons of refinement</h2>
+
+<div class="grid">
+
+<div class="card">
+<div>
+<span>Spring · Summer 2026</span>
+<h3>Lumière Voilée</h3>
+</div>
+</div>
+
+<div class="card">
+<div>
+<span>Fall · Winter 2025</span>
+<h3>Ombre Profonde</h3>
+</div>
+</div>
+
+<div class="card">
+<div>
+<span>Resort 2025</span>
+<h3>Éclat Silencieux</h3>
+</div>
+</div>
+
+<div class="card">
+<div>
+<span>Pre-Fall 2025</span>
+<h3>Noir Essence</h3>
+</div>
+</div>
+
+<div class="card">
+<div>
+<span>Archive</span>
+<h3>Maison Origins</h3>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="philosophy" id="philosophy">
+<div class="phil-box">
+“Elegance is refusal.”
+</div>
+
+<div class="phil-text">
+<h2>Our Philosophy</h2>
+<p>
+We believe fashion is not worn — it is inhabited. Each piece is crafted to express identity, silence, and presence.
+</p>
+</div>
+</section>
+
+<section class="atelier" id="atelier">
+<h2>The Atelier</h2>
+
+<div class="atelier-grid">
+
+<div class="atelier-item">
+<h3>Handcrafted</h3>
+<p>Every piece is made with precision and care.</p>
+</div>
+
+<div class="atelier-item">
+<h3>Premium Fabric</h3>
+<p>Only the finest materials are selected.</p>
+</div>
+
+<div class="atelier-item">
+<h3>Timeless Design</h3>
+<p>Designed to transcend trends and time.</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div>
+<h2>Contact Us</h2>
+<p>Let’s create something timeless together.</p>
+</div>
+
+<form>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button type="submit">Send</button>
+</form>
+</section>
+
+<footer>
+<div>Sulexy Fashion Empire</div>
+<div>© 2026 All rights reserved</div>
+</footer>
+
+</body>
+</html>
